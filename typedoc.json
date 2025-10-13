@@ -1,0 +1,26 @@
+{
+  "entryPoints": ["packages/*/*/src/index.ts"],
+  "out": "docs",
+  "theme": "default",
+  "name": "Pseudo MonoRepo Documentation",
+  "includeVersion": true,
+  "excludePrivate": true,
+  "excludeProtected": false,
+  "excludeExternals": true,
+  "readme": "README.md",
+  "plugin": ["typedoc-plugin-markdown"],
+  "gitRevision": "main",
+  "sort": ["source-order"],
+  "categorizeByGroup": true,
+  "categoryOrder": ["Core", "Helpers", "Utils", "*"],
+  "navigation": {
+    "includeCategories": true,
+    "includeGroups": true
+  },
+  "searchInComments": true,
+  "validation": {
+    "notExported": true,
+    "invalidLink": true,
+    "notDocumented": false
+  }
+}

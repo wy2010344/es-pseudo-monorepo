@@ -1,0 +1,55 @@
+# 依赖
+node_modules/
+.pnpm-store/
+
+# 构建输出
+**/dist/
+**/build/
+**/.turbo/
+**/.next/
+**/coverage/
+
+# 环境文件
+.env
+.env.local
+.env.*.local
+
+# 日志
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 运行时数据
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# 编辑器
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 忽略 packages 和 apps 下的所有内容（作为架子使用）
+packages/*/
+apps/*/
+
+# 但保留目录结构说明文件
+!packages/.gitkeep
+!apps/.gitkeep
+!packages/README.md
+!apps/README.md
+
+# 临时文件
+*.tmp
+*.temp
+
+# 测试
+.nyc_output

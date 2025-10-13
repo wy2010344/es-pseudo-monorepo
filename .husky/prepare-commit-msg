@@ -1,0 +1,12 @@
+# 如果是通过 commitizen 提交，跳过
+if [ "$2" = "message" ]; then
+  exit 0
+fi
+
+# 如果是 merge 或 squash 提交，跳过
+if [ "$2" = "merge" ] || [ "$2" = "squash" ]; then
+  exit 0
+fi
+
+# 提示使用 commitizen
+echo "💡 提示: 使用 'pnpm commit' 来获得更好的提交体验"
