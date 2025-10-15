@@ -94,17 +94,18 @@ pnpm release
 3. CI 会自动创建 PR 更新版本号
 4. 合并 PR 后自动发布到 npm
 
-## 管理脚本
+## 开发脚本
 
-项目使用 `@repo/scripts` 包提供统一的管理脚本：
+项目提供了统一的开发脚本：
 
-- `repo-dev-setup`: 开发环境初始化脚本
-- `repo-generate-docs`: 文档生成脚本
-- `repo-publish`: 包发布脚本
-- `repo-setup-hooks`: Git 钩子设置脚本
-- `repo-setup-configs`: 配置文件生成脚本
-
-这些脚本已经集成到 package.json 的 scripts 中，可以通过 `pnpm run` 命令使用。
+- `pnpm run build`: 构建所有包
+- `pnpm run dev`: 开发模式
+- `pnpm run lint`: 代码检查和修复
+- `pnpm run type-check`: 类型检查
+- `pnpm run docs`: 生成文档
+- `pnpm changeset`: 创建变更记录
+- `pnpm version-packages`: 更新版本号
+- `pnpm release`: 发布包
 
 ## 配置文件
 
@@ -148,18 +149,6 @@ pnpm run setup-hooks
 
 - **pre-commit**: 代码检查和格式化
 - **pre-push**: 运行测试
-
-## 文档生成
-
-自动生成 API 文档：
-
-```bash
-# 生成文档
-pnpm run docs
-
-# 启动文档服务器
-pnpm run docs:serve
-```
 
 ## 注意事项
 

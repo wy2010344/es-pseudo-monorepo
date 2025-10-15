@@ -37,11 +37,7 @@
       "outputs": [],
       "cache": false
     },
-    "docs": {
-      "dependsOn": ["build"],
-      "outputs": ["docs/**"],
-      "cache": true
-    },
+
     "format:check": {
       "outputs": []
     }

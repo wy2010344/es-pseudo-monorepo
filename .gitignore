@@ -51,5 +51,8 @@ apps/*/
 *.tmp
 *.temp
 
+# TypeScript 缓存
+*.tsbuildinfo
+
 # 测试
 .nyc_output
