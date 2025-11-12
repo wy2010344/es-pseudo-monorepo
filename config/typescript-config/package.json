@@ -1,0 +1,13 @@
+{
+  "name": "@repo/typescript-config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "TypeScript configuration for the monorepo",
+  "main": "index.json",
+  "files": [
+    "base.json",
+    "react.json",
+    "node.json",
+    "nextjs.json"
+  ]
+}

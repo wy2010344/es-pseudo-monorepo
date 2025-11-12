@@ -8,9 +8,11 @@
 ├── packages/           # 公开包仓库
 │   ├── config/        # 配置包（ESLint、Prettier、TypeScript、Scripts）
 │   ├── mve/           # MVE 相关包的仓库
-│   └── wy-helper/     # WY Helper 相关包的仓库
+│   ├── wy-helper/     # WY Helper 相关包的仓库
+│   └── wy-react-helper/ # WY React Helper 相关包的仓库
 └── apps/              # 应用项目（可能是私有的）
-    └── mve-vite-demo/ # MVE Vite 演示应用
+    ├── mve-vite-demo/ # MVE Vite 演示应用
+    └── vite-react-demo/ # Vite React 演示应用
 ```
 
 ## 特点
@@ -71,11 +73,11 @@ pnpm add <package> -w
 # 创建 changeset（记录变更）
 pnpm changeset
 
-# 更新版本号
-pnpm version-packages
+# 更新版本号（应用 changeset）
+pnpm changeset version
 
-# 发布所有包
-pnpm release
+# 发布变更的包（只发布有版本变更的包）
+pnpm changeset publish
 ```
 
 ## 工作流
@@ -90,9 +92,9 @@ pnpm release
 ### 发布新版本
 
 1. 使用 `pnpm changeset` 记录变更
-2. 提交变更到主仓库
-3. CI 会自动创建 PR 更新版本号
-4. 合并 PR 后自动发布到 npm
+2. 使用 `pnpm changeset version` 更新版本号
+3. 提交变更到对应的子仓库
+4. 使用 `pnpm changeset publish` 发布变更的包到 npm
 
 ## 开发脚本
 
@@ -104,14 +106,25 @@ pnpm release
 - `pnpm run type-check`: 类型检查
 - `pnpm run docs`: 生成文档
 - `pnpm changeset`: 创建变更记录
-- `pnpm version-packages`: 更新版本号
-- `pnpm release`: 发布包
+- `pnpm changeset version`: 更新版本号
+- `pnpm changeset publish`: 发布变更的包
 
 ## 配置文件
 
 - `pnpm-workspace.yaml`: pnpm 工作区配置
 - `turbo.json`: Turbo 构建配置
 - `.changeset/config.json`: Changesets 版本管理配置
+- `tsdown.config.ts`: 各包的构建配置（生成 CommonJS 和 ESM 格式）
+
+### 构建配置说明
+
+所有包使用 `tsdown` 进行构建，统一生成：
+
+- `.js` 文件：CommonJS 格式
+- `.mjs` 文件：ESM 格式
+- `.d.ts` 和 `.d.mts` 文件：TypeScript 类型定义
+
+确保 package.json 中不要添加 `"type": "module"` 字段，以保持文件命名的一致性。
 
 ## 代码风格
 
