@@ -2,7 +2,9 @@
   "$schema": "https://unpkg.com/@changesets/config@3.0.3/schema.json",
   "changelog": [
     "@changesets/changelog-github",
-    { "repo": "wy2010344/es-pseudo-monorepo" }
+    {
+      "repo": "wy2010344/es-pseudo-monorepo"
+    }
   ],
   "commit": false,
   "fixed": [],
@@ -10,7 +12,15 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["@repo/*", "vite-mve-demo", "demo", "website"],
+  "ignore": [
+    "@repo/*",
+    "mve-vite-demo",
+    "demo",
+    "wy-react-helper-website",
+    "better-react-website",
+    "mve-website",
+    "react-vite-demo"
+  ],
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
   }

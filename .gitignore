@@ -56,3 +56,4 @@ apps/*/
 
 # 测试
 .nyc_output
+.npmrc

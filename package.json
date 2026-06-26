@@ -17,22 +17,22 @@
     "commit": "cz"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.5.0",
-    "@changesets/cli": "^2.27.9",
-    "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
-    "@commitlint/prompt-cli": "^20.1.0",
-    "commitizen": "^4.3.1",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^9.16.0",
-    "globals": "^16.4.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.2.10",
-    "prettier": "^3.4.2",
-    "turbo": "^2.5.8",
-    "typescript": "^5.8.2"
+    "@changesets/changelog-github": "^0.7.0",
+    "@changesets/cli": "^2.29.8",
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "@commitlint/prompt-cli": "^21.0.1",
+    "commitizen": "catalog:",
+    "cz-conventional-changelog": "catalog:",
+    "eslint": "catalog:",
+    "globals": "catalog:",
+    "husky": "catalog:",
+    "lint-staged": "catalog:",
+    "prettier": "catalog:",
+    "turbo": "^2.9.15",
+    "typescript": "catalog:"
   },
-  "packageManager": "pnpm@10.18.2",
+  "packageManager": "pnpm@11.3.0",
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"

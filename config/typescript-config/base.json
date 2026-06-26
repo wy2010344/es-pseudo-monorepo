@@ -1,6 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    "declaration": true,
     "target": "ES2015",
     "useDefineForClassFields": true,
     "module": "ES2015",
@@ -11,14 +12,22 @@
     ],
     "skipLibCheck": true,
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
     "strict": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "isolatedDeclarations": false
   },
-  "include": ["src/**/*"],
-  "exclude": [ "dist", ".turbo", "coverage"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "dist",
+    ".turbo",
+    "coverage"
+  ]
 }

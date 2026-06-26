@@ -1,47 +1,75 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
-      "env": ["NODE_ENV"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "!.next/cache/**"
+      ],
+      "env": [
+        "NODE_ENV"
+      ]
     },
     "dev": {
       "cache": false,
       "persistent": true
     },
     "lint": {
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        "^build"
+      ],
       "outputs": []
     },
     "lint:check": {
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        "^build"
+      ],
       "outputs": []
     },
     "type-check": {
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        "^build"
+      ],
       "outputs": []
     },
     "test": {
-      "dependsOn": ["^build"],
-      "outputs": ["coverage/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "coverage/**"
+      ]
     },
     "clean": {
       "cache": false
     },
     "publish-packages": {
-      "dependsOn": ["build", "lint", "type-check", "test"],
+      "dependsOn": [
+        "build",
+        "lint",
+        "type-check",
+        "test"
+      ],
       "cache": false
     },
     "format": {
       "outputs": [],
       "cache": false
     },
-
     "format:check": {
       "outputs": []
     }
   },
-  "globalEnv": ["NODE_ENV", "CI"],
-  "globalPassThroughEnv": ["npm_config_registry"]
+  "globalEnv": [
+    "NODE_ENV",
+    "CI"
+  ],
+  "globalPassThroughEnv": [
+    "npm_config_registry"
+  ]
 }
