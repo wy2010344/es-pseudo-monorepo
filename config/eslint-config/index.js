@@ -2,7 +2,7 @@ import js from '@eslint/js'
 import typescript from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
 import prettier from 'eslint-config-prettier'
-
+import contextPlugin from './rules/privileged-context.js'
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   // 基础 JavaScript 推荐配置
@@ -35,10 +35,26 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
+      context: {
+        rules: {
+          'privileged-context': contextPlugin,
+        },
+      },
     },
     rules: {
       ...typescript.configs.recommended.rules,
-
+      'context/privileged-context': [
+        'error',
+        {
+          privilegedTag: '@privileged',
+          privilegedFunctions: [
+            'dangerousOp',
+            'rawQuery',
+            'execSync',
+            'adminAction',
+          ],
+        },
+      ],
       // 基础规则
       'no-console': 'warn',
       'no-debugger': 'error',
