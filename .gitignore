@@ -47,6 +47,9 @@ apps/*/
 !packages/README.md
 !apps/README.md
 
+# 独立的嵌入式仓库（在自身仓库中管理）
+x-manage/
+
 # 临时文件
 *.tmp
 *.temp
