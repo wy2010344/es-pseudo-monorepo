@@ -10,16 +10,28 @@
   "fixed": [],
   "linked": [],
   "access": "public",
+  "privatePackages": {
+    "version": false,
+    "tag": false
+  },
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
     "@repo/*",
-    "mve-vite-demo",
-    "demo",
-    "wy-react-helper-website",
+    "better-react-demo",
     "better-react-website",
+    "demo",
+    "mve-vite-demo",
     "mve-website",
-    "react-vite-demo"
+    "react-vite-demo",
+    "wy-react-helper-website",
+    "hooks-only-demo",
+    "client",
+    "selftest",
+    "thread-task",
+    "todo",
+    "verify-app",
+    "x-manage*"
   ],
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
